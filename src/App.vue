@@ -1,39 +1,51 @@
 <template>
   <div id="app">
     <b-container fluid class="p-4 bg-dark">
-      <b-row>te
-        <b-container fluid class="p-4 bg-light">tee</b-container>
-      </b-row>
       <b-row>
-        <img src="./assets/img/ethereum.svg" />
+        <b-container fluid class="p-3 bg-light">
+          <b-row>
+            <b-col>Link 1</b-col>
+            <b-col>Link 2</b-col>
+            <b-col>Link 3</b-col>
+            <b-col>Link 4</b-col>
+          </b-row>
+        </b-container>
+      </b-row>
+      <b-row class="m-3">
         <b-card-group deck>
-          <b-card img-src="https://placekitten.com/1000/300"
-                  img-alt="Teamspeak Logo"
-                  img-top>
-            <p class="card-text">
-              Online: 7/30
-            </p>
+          <b-card>
+            <img src="./assets/img/teamspeak.svg" alt="Teamspeak Logo" class="card-img-top">
+            <div><p class="card-text">
+              Status: Online
+              <br/>
+              Online: 5 / 32
+            </p></div>
           </b-card>
-          <b-card img-src="./assets/img/ethereum.svg"
-                  img-alt="Ethereum"
-                  img-top>
-            <p class="card-text">
-              dasdsa
-            </p>
+          <b-card>
+            <img src="./assets/img/ethereum.svg" alt="Ethereum Logo" class="card-img-top">
+            <div><p class="card-text">
+              Status: Running
+              <br/>
+              Solutions: 5 / 30 min
+            </p></div>
           </b-card>
-          <b-card img-src="https://placekitten.com/1000/300"
-                  img-alt="Card image"
-                  img-top>
-            <p class="card-text">
-              Some quick example text to build on the card and make up the bulk of the card's content.
-            </p>
+          <b-card>
+            <img src="./assets/img/cpu.svg" alt="CPU Logo" class="card-img-top">
+            <div><p class="card-text">
+              CPU: 3 % / 43 °C
+              <br/>
+              GPU: 50 % / 60 °C
+            </p></div>
           </b-card>
-          <b-card img-src="https://placekitten.com/1000/300"
-                  img-alt="Card image"
-                  img-top>
-            <p class="card-text">
-              Some quick example text to build on the card and make up the bulk of the card's content.
-            </p>
+          <b-card>
+            <img src="./assets/img/pi-hole.svg" alt="Pi-Hole Logo" class="card-img-top">
+            <div><p class="card-text">
+              Status: Running
+              <br/>
+              DNS Requests: 5345 / 24h
+              <br/>
+              Ads Blocked: 5.5 %
+            </p></div>
           </b-card>
         </b-card-group>
       </b-row>
@@ -58,6 +70,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+.card-img-top {
+  height: 5em;
+}
+
 </style>
