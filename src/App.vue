@@ -7,7 +7,7 @@
 
       <b-navbar-brand href="#">Home</b-navbar-brand>
 
-      <b-collapse is-nav id="naiv_collapse">
+      <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav>
           <b-nav-item href="#">Link 1</b-nav-item>
