@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <b-container fluid class="p-4 bg-dark">
+    <b-container fluid class="p-4">
       <b-row>
-        <b-container fluid class="p-3 bg-light">
+        <b-container fluid class="p-3">
           <b-row>
             <b-col>Link 1</b-col>
             <b-col>Link 2</b-col>
@@ -24,7 +24,7 @@
           <b-card>
             <img src="./assets/img/ethereum.svg" alt="Ethereum Logo" class="card-img-top">
             <div><p class="card-text">
-              Status: Running
+              Status: Online
               <br/>
               Solutions: 5 / 30 min
             </p></div>
@@ -40,7 +40,7 @@
           <b-card>
             <img src="./assets/img/pi-hole.svg" alt="Pi-Hole Logo" class="card-img-top">
             <div><p class="card-text">
-              Status: Running
+              Status: Online
               <br/>
               DNS Requests: 5345 / 24h
               <br/>
@@ -64,16 +64,21 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 
-.card-img-top {
-  height: 5em;
-}
+  .card-img-top {
+    height: 5em;
+  }
+
+  body {
+    background: #DFDBE5 url(assets/img/background.svg) center center fixed;
+    background-size: 10em 10em;
+  }
 
 </style>
