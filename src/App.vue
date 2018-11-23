@@ -1,16 +1,28 @@
 <template>
   <div id="app">
+
+    <b-navbar toggleable="md" type="dark" variant="dark">
+
+      <b-navbar-brand href="#">Home</b-navbar-brand>
+
+      <b-collapse is-nav id="naiv_collapse">
+
+        <b-navbar-nav>
+          <b-nav-item href="#">Link 1</b-nav-item>
+          <b-nav-item href="#">Link 2</b-nav-item>
+          <b-nav-item href="#">Link 3</b-nav-item>
+          <b-nav-item href="#">Server Status</b-nav-item>
+        </b-navbar-nav>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <nav-text>Add something useful here ;)</nav-text>
+        </b-navbar-nav>
+
+      </b-collapse>
+    </b-navbar>
+
     <b-container fluid class="p-4">
-      <b-row>
-        <b-container fluid class="p-3">
-          <b-row>
-            <b-col>Link 1</b-col>
-            <b-col>Link 2</b-col>
-            <b-col>Link 3</b-col>
-            <b-col>Link 4</b-col>
-          </b-row>
-        </b-container>
-      </b-row>
       <b-row class="m-3">
         <b-card-group deck>
           <b-card>
@@ -55,9 +67,12 @@
 </template>
 
 <script>
+import NavText from "bootstrap-vue/es/components/nav/nav-text";
+
 export default {
   name: 'app',
   components: {
+    NavText
   }
 }
 
