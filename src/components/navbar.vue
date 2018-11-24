@@ -13,7 +13,7 @@
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-text>Random Text</b-nav-text>
+        <b-nav-text>Random Text Demo</b-nav-text>
       </b-navbar-nav>
 
     </b-collapse>
