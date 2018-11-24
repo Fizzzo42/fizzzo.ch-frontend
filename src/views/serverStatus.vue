@@ -38,17 +38,59 @@
         </b-card>
       </b-card-group>
     </b-row>
+    <b-row>
+      <line-chart :chart-data="datacollection"></line-chart>
+      <button @click="fillData()">Randomize</button>
+    </b-row>
   </b-container>
 </template>
 
 <script>
+
+  import LineChart from '../components/line-chart';
+
   export default {
-    name: "serverStatus"
+    name: "serverStatus",
+    components: {
+      LineChart
+    },
+    data () {
+      return {
+        datacollection: null
+      }
+    },
+    mounted () {
+      this.fillData()
+    },
+    methods: {
+      fillData () {
+        this.datacollection = {
+          labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"],
+          datasets: [
+            {
+              data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(),
+                this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(),
+                this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(),]
+            }
+          ]
+        }
+      },
+      getRandomInt () {
+        return Math.floor(Math.random() * 10);
+      }
+    }
   }
+
 </script>
 
 <style scoped>
+
   .card-img-top {
     height: 5em;
   }
+
+  .card-text {
+    margin-top: 1em;
+  }
+
 </style>

@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router'
+import router from './router';
 import BootstrapVue from 'bootstrap-vue';
+import { Line } from 'vue-chartjs';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -20,6 +21,7 @@ Vue.component('b-col', col);
 Vue.component('b-img', img);
 Vue.component('b-card', card);
 Vue.component('b-card-img', cardImg);
+Vue.component('charts-line', Line);
 
 Vue.config.productionTip = false;
 
